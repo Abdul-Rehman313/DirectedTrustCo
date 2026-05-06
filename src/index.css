@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color: #111928;
+    background-color: #f9fafb;
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply m-0 min-h-screen bg-background text-text-primary;
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+
+  input:focus-visible,
+  textarea:focus-visible,
+  button:focus-visible,
+  [role='button']:focus-visible,
+  a:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+}
+
+@layer components {
+  .dc-card {
+    @apply rounded-lg border border-border bg-surface shadow-card;
+  }
+
+  .dc-muted {
+    @apply text-sm text-text-secondary;
+  }
+
+  .dc-donut-self {
+    background: conic-gradient(
+      #22c55e 0deg 52deg,
+      #facc15 52deg 92deg,
+      #f97316 92deg 116deg,
+      #14b8a6 116deg 190deg,
+      #4f46e5 190deg 360deg
+    );
+  }
+
+  .dc-donut-crypto {
+    background: conic-gradient(
+      #9333ea 0deg 210deg,
+      #22d3ee 210deg 360deg
+    );
+  }
+}
